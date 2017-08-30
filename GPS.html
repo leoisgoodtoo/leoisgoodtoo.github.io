@@ -1,0 +1,30 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>GPS Test</title>
+<script>
+if( navigator.geolocation ) {
+alert("GPS已被定位....千萬不可以動手!!!");
+// 支援GPS地理定位
+navigator.geolocation.getCurrentPosition( geoYes, geoNo);
+}
+else {
+alert("目前GPS無法定位....趕快補刀吧!!!");
+}
+function geoYes(evt){
+//alert(evt);
+str = "緯度" + evt.coords.latitude;
+str += "<br />經度" + evt.coords.longitude;
+str += "<br />精確度" + evt.coords.accuracy;
+// str += 等於=> str = str+....
+document.getElementById("posStr").innerHTML=str;
+}
+
+function geoNo(evt){
+alert("GPS取得失敗");
+}
+</script>
+</head>
+<body>
+定位資訊
+<p id="posStr">111222</p>
+</body>
