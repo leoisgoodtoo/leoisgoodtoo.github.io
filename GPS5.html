@@ -16,7 +16,12 @@ function geoYes(evt){
 //alert(evt);
 str = "緯度" + evt.coords.latitude;
 str += "<br />經度" + evt.coords.longitude;
-str += "<br />精確度" + evt.coords.accuracy;
+str += "<br />位置精確度" + evt.coords.accuracy;
+str += "<br />海拔" + evt.coords.altitude;
+str += "<br />海拔精確度" + evt.coords.altitudeAccuracy;
+str += "<br />方向(°N)" + evt.coords.heading;
+str += "<br />速度(m/s)" + evt.coords.speed;
+str += "<br />反應時間" + evt.timestamp;
 // str += 等於=> str = str+....
 document.getElementById("posStr").innerHTML=str;
 
