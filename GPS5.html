@@ -5,12 +5,12 @@
 <title>GPS 測試</title>
 <script>
 if( navigator.geolocation ) {
-alert("GPS已被定位....千萬不可以動手!!!");
+alert("GPS已定位");
 // 支援GPS地理定位
 navigator.geolocation.getCurrentPosition( geoYes, geoNo);
 }
 else {
-alert("目前GPS無法定位....趕快補刀吧!!!");
+alert("GPS無法定位");
 }
 function geoYes(evt){
 //alert(evt);
