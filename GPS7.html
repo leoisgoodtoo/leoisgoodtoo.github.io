@@ -9,13 +9,12 @@
 		</style>
 	</head>
 <body>
- <h3>My Google Maps Demo</h3>
     <div id="map"></div>
 
 
 <p id="demo">Get GPS</p>
 <button onclick="initMap()">try</button>
-<div id="mapholder"></div>
+
 <script>
 var x=document.getElementById("demo");
 function initMap()
@@ -29,13 +28,7 @@ function initMap()
 
 function showPosition(position)
 {
-  var latlon=position.coords.latitude+","+position.coords.longitude;
-
-  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
-  +latlon+"&zoom=14&size=400x300&sensor=false";
-  document.getElementById("mapholder").innerHTML="<img src='"+img_url+"' />";
-
-  
+   
   var uluru = {lat: position.coords.latitude, lng: position.coords.longitude};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 18,
@@ -45,12 +38,7 @@ function showPosition(position)
           position: uluru,
           map: map
         });
-  
-  
-  
-  
-  
-  }
+   }
 
 function showError(error)
   {
