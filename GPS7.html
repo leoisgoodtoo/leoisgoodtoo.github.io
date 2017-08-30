@@ -12,15 +12,16 @@
     <div id="map"></div>
 
 
-<p id="demo">Get GPS</p>
+<p id="status">Get GPS</p>
 <button onclick="initMap()">try</button>
 
 <script>
-var x=document.getElementById("demo");
+var x = document.getElementById("status");
 function initMap()
   {
   if (navigator.geolocation)
     {
+	x.innerHTML="GPS sucess";
     navigator.geolocation.getCurrentPosition(showPosition,showError);
     }
   else{x.innerHTML="Geolocation is not supported by this browser.";}
