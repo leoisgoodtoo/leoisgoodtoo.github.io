@@ -36,10 +36,8 @@
   <body>
   
 	<div id="floating-panel">
-      <input onclick="clearMarkers();" type=button value="Hide Markers">
-      <input onclick="showMarkers();" type=button value="Show All Markers">
-      <input onclick="deleteMarkers();" type=button value="Delete Markers">
-	  <button onclick="initMap()">try</button>
+      <input onclick="addMarkers();" type=button value="定位">
+      <button onclick="initMap()">try</button>
 	  雷達狀態:
 	  <b id="status">準備中</b>
 	  
@@ -72,6 +70,16 @@
 			map: map
 		});
 	  }
+	  
+	  function addMarker(location) {
+	  
+	  
+	  
+	  
+	  }
+	  
+	  
+	  
 	  
 	  function showError(error){
 		switch(error.code) {
