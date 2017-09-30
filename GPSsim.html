@@ -52,14 +52,6 @@
           center: haightAshbury,
           mapTypeId: 'terrain'
         });
-
-        // This event listener will call addMarker() when the map is clicked.
-        map.addListener('click', function(event) {
-          addMarker(event.latLng);
-        });
-
-        // Adds a marker at the center of the map.
-        //addMarker(haightAshbury);
     }
 	
 	// Adds a marker to the map and push to the array.
@@ -100,7 +92,6 @@
 		clearMarkers();
 		var gps = {lat: position.coords.latitude, lng: position.coords.longitude};
 		addMarker(gps);
-		//showMarkers();
 		x.innerHTML = "Latitude: " + position.coords.latitude + 
 			   "<br />Longitude: " + position.coords.longitude;	
 	}
@@ -115,13 +106,6 @@
       function clearMarkers() {
         setMapOnAll(null);
       }
-	
-	// Shows any markers currently in the array.
-      function showMarkers() {
-        setMapOnAll(map);
-      }
-	
-	
 
 </script>
 <script async defer
