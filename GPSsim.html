@@ -92,9 +92,24 @@
 	function showPosition(position)
 	{
 		addMarker(position);
+		showMarkers();
 		x.innerHTML = "Latitude: " + position.coords.latitude + 
 			   "<br />Longitude: " + position.coords.longitude;	
 	}
+	
+	function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
+      }
+	
+	
+	// Shows any markers currently in the array.
+      function showMarkers() {
+        setMapOnAll(map);
+      }
+	
+	
 
 </script>
 <script async defer
