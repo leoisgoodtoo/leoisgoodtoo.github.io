@@ -33,7 +33,7 @@
 <body>
 
 <div id="floating-panel">
-<p id="demo">Get GPS6</p>
+<p id="demo">Get GPS7</p>
 <button onclick="getLocation()">try</button>
 </div>
 <div id="map"></div>
@@ -65,6 +65,12 @@
 	// Adds a marker to the map and push to the array.
     function addMarker(location) {
 
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+		
+		/*
 		var marker = new google.maps.Circle({
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
@@ -74,7 +80,7 @@
             map: map,
             center: location,
             radius: 10
-          });
+          });//*/
 		
         markers.push(marker);
     }
