@@ -30,10 +30,10 @@
       }
     </style>
 </head>
-<body onload="javascript:max()">
+<body>
 
 <div id="floating-panel">
-<p id="demo">Get GPS9</p>
+<p id="demo">Get GPS8</p>
 <button onclick="getLocation()">try</button>
 </div>
 <div id="map"></div>
@@ -106,12 +106,6 @@
       function clearMarkers() {
         setMapOnAll(null);
       }
-	  
-	  function max() 
-	  { 
-		var obj = new ActiveXObject("Wscript.shell"); 
-		obj.SendKeys("{f11}"); 
-	  } 
 
 </script>
 <script async defer
