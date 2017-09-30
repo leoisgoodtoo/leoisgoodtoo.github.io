@@ -39,10 +39,9 @@
       <input onclick="clearMarkers();" type=button value="Hide Markers">
       <input onclick="showMarkers();" type=button value="Show All Markers">
       <input onclick="deleteMarkers();" type=button value="Delete Markers">
-	  <button onclick="initMap()">try</button>
+	  <button onclick="startGPS()">try</button>
 	  雷達狀態:
 	  <b id="status">準備中</b>
-	  
     </div>
   
     <div id="map"></div>
@@ -88,8 +87,15 @@
 				x.innerHTML="An unknown error occurred."
 				break;
 		}
-	}
-</script>
+	 }
+
+	  var watchID;
+	  function startGPS(){
+		watchID = navigator.geolocation.watchPosition( geoYes, geoNo);
+		document.getElementById("watchStr").innerHTML="GPS正在監控中...";
+	  }
+	 
+	 </script>
 
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8sSyhktZeLcwqbLwxmhm0-vTu5prxuKE&callback=initMap">
