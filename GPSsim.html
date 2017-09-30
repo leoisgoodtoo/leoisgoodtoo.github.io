@@ -91,9 +91,8 @@
 
 	function showPosition(position)
 	{
-		var haightAshbury = {lat: 24.9824084, lng: 121.5390302};
-		addMarker(haightAshbury);
-		addMarker(position);
+		var gps = {lat: position.coords.latitude, lng: position.coords.longitude};
+		addMarker(gps);
 		showMarkers();
 		x.innerHTML = "Latitude: " + position.coords.latitude + 
 			   "<br />Longitude: " + position.coords.longitude;	
