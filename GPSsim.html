@@ -33,7 +33,7 @@
 <body>
 
 <div id="floating-panel">
-<p id="demo">Get GPS3</p>
+<p id="demo">Get GPS4</p>
 <button onclick="getLocation()">try</button>
 </div>
 <div id="map"></div>
@@ -91,6 +91,8 @@
 
 	function showPosition(position)
 	{
+		var haightAshbury = {lat: 24.9824084, lng: 121.5390302};
+		addMarker(haightAshbury);
 		addMarker(position);
 		showMarkers();
 		x.innerHTML = "Latitude: " + position.coords.latitude + 
